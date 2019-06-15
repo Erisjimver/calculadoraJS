@@ -21,11 +21,19 @@ function display_numeros(numero){
 
 function suma(){
 
+	if(restar)
+	{
+		acumulado = acumulado-parseInt(cifra);
+		document.getElementById("display").value=acumulado;		
+	}
+	else{
 	acumulado += parseInt(cifra);
-	cifra = "";
 	document.getElementById("display").value=acumulado;
+	
+	}
+	cifra = "";
 	sumar=true;
-
+	restar=false;
 }
 
 function resta(){
@@ -57,8 +65,13 @@ function igual(){
 		document.getElementById("display").value=acumulado-parseInt(cifra);
 
 	}
+	acumulado=parseInt(document.getElementById("display").value);
+	cifra=0;
 
 }
+
+
+
 
 
 
