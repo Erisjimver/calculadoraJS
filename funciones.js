@@ -19,7 +19,7 @@ function display_numeros(numero){
 	cifra = document.getElementById("display").value;
 
 }
-
+//funcion suma
 function suma(){
 
 	if(restar)
@@ -38,6 +38,7 @@ function suma(){
 	p_operacion=false;
 }
 
+//funcion resta
 function resta(){
 
 	if(p_operacion==false)
