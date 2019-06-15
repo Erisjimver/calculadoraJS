@@ -2,6 +2,7 @@ var cifra ="";
 var acumulado=0;
 var sumar=false;
 var restar=0;
+var p_operacion=true;
 
 function inicio(){
 
@@ -34,9 +35,13 @@ function suma(){
 	cifra = "";
 	sumar=true;
 	restar=false;
+	p_operacion=false;
 }
 
 function resta(){
+
+	if(p_operacion==false)
+	{
 
 	if(sumar){
 		acumulado = acumulado+parseInt(cifra);
@@ -47,9 +52,17 @@ function resta(){
 		acumulado = acumulado - parseInt(cifra);
 		document.getElementById("display").value=acumulado;
 	}
+	}
+	else
+	{
+		acumulado=parseInt(cifra);
+		p_operacion= false;
+
+	}
 		cifra = "";
 		sumar=false;
 		restar=true;
+
 }
 
 function igual(){
